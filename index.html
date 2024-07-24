@@ -4,46 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Color Picker Tool</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-dark text-light">
+<body>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-3 d-flex flex-column align-items-center justify-content-center vh-100 bg-secondary text-center">
-                <div id="clock" class="display-4 text-warning mb-4"></div>
+            <!-- Digital Clock Section -->
+            <div class="col-md-4 d-flex justify-content-center align-items-center">
+                <div id="clock"></div>
             </div>
-            <div class="col-md-9 p-4">
-                <div class="container bg-dark text-light p-4 rounded">
-                    <h1 class="text-warning text-center mb-4">Color Picker Tool</h1>
-                    <div class="form-group">
-                        <label for="colorPicker" class="h4">Choose a color:</label>
-                        <input type="color" id="colorPicker" class="form-control" value="#ff0000">
-                    </div>
-                    <div class="color-info mb-4">
-                        <p class="h5">HEX: <span id="hexValue" class="text-warning">#ff0000</span></p>
-                        <p class="h5">RGB: <span id="rgbValue" class="text-warning">rgb(255, 0, 0)</span></p>
-                    </div>
-                    <button id="generatePalette" class="btn btn-warning btn-lg btn-block mb-4">Generate Palette</button>
-                    <div id="colorPalette" class="d-flex flex-wrap justify-content-center"></div>
+            <!-- Main Application Section -->
+            <div class="col-md-8">
+                <h1 class="text-light">Color Picker Tool</h1>
+                <div class="form-group">
+                    <label for="colorPicker" class="text-light">Choose a color:</label>
+                    <input type="color" id="colorPicker" class="form-control" />
+                </div>
+                <div id="colorInfo" class="text-light">
+                    <p class="color-info">HEX: <span id="hexValue"></span></p>
+                    <p class="color-info">RGB: <span id="rgbValue"></span></p>
+                </div>
+                <button id="generatePalette" class="btn btn-cyan">Generate Palette</button>
+                <div id="palette" class="d-flex flex-wrap mt-3">
+                    <!-- Color boxes will be inserted here dynamically -->
                 </div>
             </div>
         </div>
     </div>
-    <!-- Footer -->
-<footer class="footer bg-dark text-light py-3">
-    <div class="container text-center">
-        <p class="mb-0">Check out my portfolio for more projects and information!</p>
-        <a href="https://sanjoy-chattopadhay.github.io/portfolio/" class="btn btn-cyan mt-2" target="_blank">Visit Portfolio</a>
-        <p class="mt-2">&copy; 2024 Sanjoy Chattopadhay. All rights reserved.</p>
-    </div>
-</footer>
 
-    <!-- Bootstrap JS and dependencies -->
+    <!-- Footer Section -->
+    <footer class="footer bg-dark text-light py-3">
+        <div class="container text-center">
+            <p class="mb-0">Check out my portfolio for more projects and information!</p>
+            <a href="https://sanjoy-chattopadhay.github.io/portfolio/" class="btn btn-cyan mt-2" target="_blank">Visit Portfolio</a>
+            <p class="mt-2">&copy; 2024 Sanjoy Chattopadhay. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
