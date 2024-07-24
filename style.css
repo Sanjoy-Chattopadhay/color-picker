@@ -5,19 +5,20 @@ body {
 
 .container-fluid {
     background-color: #222; /* Slightly lighter dark background */
+    padding: 20px;
 }
 
-.color-info, .form-group {
+.color-info {
     color: #F7CAC9; /* Light Pink for text */
 }
 
-.btn-warning {
+.btn-cyan {
     background-color: #03DAC6; /* Cyan */
     border: none;
     color: white;
 }
 
-.btn-warning:hover {
+.btn-cyan:hover {
     background-color: #02b9a3; /* Darker Cyan for hover effect */
 }
 
@@ -40,24 +41,21 @@ body {
 }
 
 #clock {
-    font-size: 4rem;
+    font-family: 'Press Start 2P', cursive; /* Digital-style font */
+    font-size: 5rem; /* Larger font size */
     font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-    color: #03DAC6; /* Cyan for the clock */
+    color: #03DAC6; /* Cyan color for the clock */
+    text-shadow: 
+        0 0 10px rgba(0, 0, 0, 0.8), /* Outer shadow for glowing effect */
+        0 0 20px rgba(0, 0, 0, 0.6); /* Inner shadow for depth */
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    border-radius: 10px; /* Rounded corners */
+    margin: 20px;
 }
 
 .footer {
     background-color: #222;
-}
-
-.btn-cyan {
-    background-color: #03DAC6; /* Cyan */
-    border: none;
-    color: white;
-}
-
-.btn-cyan:hover {
-    background-color: #02b9a3; /* Darker Cyan for hover effect */
 }
 
 .footer p, .footer a {
